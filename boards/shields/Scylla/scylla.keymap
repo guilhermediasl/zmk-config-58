@@ -23,42 +23,39 @@
 			>;
         };
 
-		lower_layer {
-// ------------------------------------------------------------------------------------------------------------
-// | TILDE |  !   |  @    |  #    |  $   |  %   |                   |  ^   |  &    |  *    |  (   |   )   |  DEL  |
-// | RESET |      |       |       |      |  [   |                   |  ]   |  7    |  8    |  9   |       |   +   |
-// |       | HOME | PG UP | PG DN | END  |  (   |                   |  )   |  4    |  5    |  6   |   -   |  "|"  |
-// |       |      |       |       |      |      |        |  |       |      |  1    |  2    |  3   |   =   |   _   |
-//                        |  CTRL | SPCE |      |                   |      | ENTR  | RGUI|
-//                                | HOME | BKSP |                   | DEL  | ALT | 
-
-			bindings = <
-&kp TILDE &kp EXCL  &kp AT    &kp HASH  &kp DLLR  &kp PRCNT                 &kp CARET &kp AMPS   &kp STAR  &kp LPAR  &kp RPAR     &kp DEL
-&reset    &trans    &trans    &trans    &trans    &kp LBKT                  &kp RBKT  &kp KP_N7  &kp KP_N8 &kp N9    &trans       &kp PLUS
-&trans    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &kp LPAR                  &kp RPAR  &kp KP_N4  &kp KP_N5 &kp KP_N6 &kp KP_MINUS &kp PIPE
-&trans    &trans    &trans    &trans    &trans    &trans                    &trans    &kp KP_N1  &kp KP_N2 &kp KP_N3 &kp KP_EQUAL &kp UNDER
-                              &kp LCTRL &kp SPACE &trans                    &trans    &kp ENTER  &kp RGUI
-                                        &kp HOME  &kp BSPC                  &kp DEL   &kp RALT
+        lower_layer {
+            bindings = <
+                &trans &trans &trans &trans &trans                       &kp C_VOL_UP   &trans       &kp UP    &trans    &kp PG_UP
+                &trans &kp PSCRN &trans &trans &trans                       &kp C_MUTE     &kp LEFT     &kp DOWN  &kp RIGHT &kp PG_DN
+                &trans &trans &trans &trans &trans                       &kp C_VOL_DN   &kp FSLH     &kp BSLH  &kp QMARK &kp PIPE
+                       &trans &trans                                                    &mkp LCLK    &mkp RCLK
+                                     &trans &trans                       &trans &trans
+                                            &trans &trans         &trans &trans
+                                            &trans &trans         &trans &trans
             >;
         };
 
-		raise_layer {
-// ------------------------------------------------------------------------------------------------------------
-// | F12    |  F1      |  F2       |   F3     |  F4      |  F5      |                    |  F6  |  F7  |     F8   |  F9   |   F10    |  F11   | 
-// |        |          |           |          |          |  [       |                    |  ]   |      | NUM LOCK |  INS  | SCL LOCK |  MUTE  |
-// |        | LEFT     |  UP       | DOWN     | RIGHT    |  (       |                    |  )   | PREV | PLAY     | NEXT  |          | VOL UP |
-// | BT CLR | BT SEL 0 | BT SEL 1  | BT SEL 2 | BT SEL 3 | BT SEL 4 |        |  |        |      |      |          |       |          | VOL DN |
-//                                 |  CTRL    | SPCE     |          |                    |      | ENTR | RGUI     |
-//                                            | HOME     | BKSP     |                    | DEL  | ALT | 
-          
-bindings = <
-&kp F12    &kp F1       &kp F2       &kp F3       &kp F4       &kp F5                    &kp F6    &kp F7     &kp F8     &kp F9     &kp F10   &kp F11
-&trans     &trans       &trans       &trans       &trans       &kp LBKT                  &kp RBKT  &trans     &kp LNLCK  &kp INS    &kp SLCK  &kp K_MUTE
-&trans     &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT    &kp LPAR                  &kp RPAR  &kp K_PREV &kp C_PLAY &kp K_NEXT &trans    &kp K_VOL_UP 
-&bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4              &trans    &trans     &trans     &trans     &trans    &kp K_VOL_DN
-                                     &kp LCTRL    &kp SPACE    &trans                    &trans    &kp ENTER  &kp RGUI
-                                                  &kp HOME     &kp BSPC                  &kp DEL   &kp RALT
+        raise_layer {
+            bindings = <
+    &kp F1    &kp F2  &kp F3    &kp F4    &kp F5                        &kp F6     &kp F7    &kp F8      &kp F9    &kp F10
+    &kp N1    &kp N2  &kp N3    &kp N4    &kp N5                        &kp N6     &kp N7    &kp N8      &kp N9    &kp N0
+    &kp EXCL  &kp AT  &kp HASH  &kp DLLR  &kp PRCNT                     &kp CARET  &kp AMPS  &kp ASTRK   &kp LPAR  &kp RPAR
+              &kp F11 &kp F12                                                                &trans      &trans
+                                &trans    &trans                        &trans     &trans
+                                          &trans    &trans    &trans    &trans
+                                          &trans    &trans    &trans    &trans
             >;
         };
-	};
+	adjust_layer {
+            bindings = <
+		&kp F1        &kp F2       &kp F3       &kp F4        &kp F5           &kp F6  &kp F7  &kp F8   &kp F9   &kp F10
+                &out OUT_BLE  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2  &bt BT_SEL 3     &none   &none   &none    &kp F11  &kp F12
+                &out OUT_USB  &none        &none        &none         &none            &none   &none   &none    &none    &none 
+                              &bt BT_CLR   &bt BT_CLR_ALL                                              &none    &none
+                                                      &none &none                      &none &none
+                                                      &none &none                      &none &none
+                                                      &none &none                      &none &none
+            >;
+        };
+    };
 };
