@@ -1,0 +1,11 @@
+file_format: "1"
+id: scylla
+name: Dactyl Manuform 4x5
+type: shield
+url: https://github.com/abstracthat/dactyl-manuform
+requires: [pro_micro]
+features:
+  - keys
+siblings:
+  - scylla_left
+  - scylla_right
