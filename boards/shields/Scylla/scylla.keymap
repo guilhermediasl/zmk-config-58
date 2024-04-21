@@ -36,8 +36,7 @@
 &reset    &trans    &trans    &trans    &trans    &kp LBKT                  &kp RBKT  &kp KP_N7  &kp KP_N8 &kp N9    &trans       &kp PLUS
 &trans    &kp HOME  &kp PG_UP &kp PG_DN &kp END   &kp LPAR                  &kp RPAR  &kp KP_N4  &kp KP_N5 &kp KP_N6 &kp KP_MINUS &kp PIPE
 &trans    &trans    &trans    &trans    &trans    &trans                    &trans    &kp KP_N1  &kp KP_N2 &kp KP_N3 &kp KP_EQUAL &kp UNDER
-                              &kp LCTRL &kp SPACE &trans                    &trans    &kp ENTER  &kp RGUI
-                                        &kp HOME  &kp BSPC                  &kp DEL   &kp RALT
+&kp LCTRL &kp SPACE &trans    &kp HOME  &kp BSPC                            &trans    &kp ENTER  &kp RGUI  &kp DEL   &kp RALT
             >;
         };
 
@@ -47,8 +46,7 @@
 &trans     &trans       &trans       &trans       &trans       &kp LBKT                  &kp RBKT  &trans     &kp LNLCK  &kp INS    &kp SLCK  &kp K_MUTE
 &trans     &kp LEFT     &kp UP       &kp DOWN     &kp RIGHT    &kp LPAR                  &kp RPAR  &kp K_PREV &kp C_PLAY &kp K_NEXT &trans    &kp K_VOL_UP 
 &bt BT_CLR &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4              &trans    &trans     &trans     &trans     &trans    &kp K_VOL_DN
-                                     &kp LCTRL    &kp SPACE    &trans                    &trans    &kp ENTER  &kp RGUI
-                                                  &kp HOME     &kp BSPC                  &kp DEL   &kp RALT
+&kp LCTRL  &kp SPACE    &trans       &kp HOME     &kp BSPC                               &trans    &kp ENTER  &kp RGUI   &kp DEL    &kp RALT
             >;
         };
 	adjust_layer {
