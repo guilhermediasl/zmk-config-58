@@ -1,11 +1,12 @@
 file_format: "1"
 id: scylla
-name: Dactyl Manuform 4x5
+name: Scylla
 type: shield
-url: https://github.com/abstracthat/dactyl-manuform
+url: https://github.com/guilhermediasl/zmk-config-58
 requires: [pro_micro]
 features:
   - keys
+  - display
 siblings:
   - scylla_left
   - scylla_right
